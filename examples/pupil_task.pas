@@ -15,8 +15,6 @@ uses {$IFDEF UNIX}cthreads, cmem,{$ENDIF}
   SysUtils,
   Pupil.Tasks, zmq, zmq.helpers;
 
-{$R *.res}
-
 var
   context, requester : Pointer;
 
