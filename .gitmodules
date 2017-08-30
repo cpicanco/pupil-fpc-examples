@@ -1,0 +1,9 @@
+[submodule "msgpack-delphi"]
+	path = msgpack-delphi
+	url = git@github.com:cpicanco/msgpack-delphi.git
+[submodule "fpc-zmq"]
+	path = fpc-zmq
+	url = git@github.com:cpicanco/fpc-zmq.git
+[submodule "pupil-fpc"]
+	path = pupil-fpc
+	url = https://github.com/cpicanco/pupil-fpc
