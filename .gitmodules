@@ -7,3 +7,6 @@
 [submodule "pupil-fpc"]
 	path = pupil-fpc
 	url = https://github.com/cpicanco/pupil-fpc
+[submodule "libzmq"]
+	path = libzmq
+	url = https://github.com/zeromq/libzmq.git
