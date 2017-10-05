@@ -22,7 +22,7 @@ type
 
   TMyClass = class
   private
-    procedure RequestReceived(Sender: TObject; ARequest, AResponse: String);
+    procedure ReplyReceived(Sender: TObject; ARequest, AResponse: String);
     procedure MultiPartMessageReceived(Sender: TObject; AMultiPartMessage : TPupilMessage);
   public
     constructor Create(APupilClient : TPupilClient);
@@ -36,7 +36,7 @@ implementation
 
 { TMyClass }
 
-procedure TMyClass.RequestReceived(Sender: TObject;
+procedure TMyClass.ReplyReceived(Sender: TObject;
   ARequest, AResponse: String);
 begin
   WriteLn(Sender.ClassName, #32, ARequest,#32,AResponse);
@@ -59,7 +59,7 @@ begin
   APupilClient.OnCalibrationSuccessful:= @MultiPartMessageReceived;
   APupilClient.OnMultiPartMessageReceived:= @MultiPartMessageReceived;
   APupilClient.OnRecordingStarted:= @MultiPartMessageReceived;
-  APupilClient.OnRequestReceived:= @RequestReceived;
+  APupilClient.OnReplyReceived:= @ReplyReceived;
 end;
 
 procedure TMyClass.Wait(AValue: Cardinal);
